@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Animation day-01</title>
+        <style>
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+            body{
+                height: 100vh;
+                background: linear-gradient(#ff5722, #ffc107);
+            }
+            h1{
+                color: #fff;
+                font-size: 3em;
+                position: absolute;
+                top: 50vh;
+                left: 20vw;
+            }
+            .square > ul > li{
+                 width: 30px;
+                 height: 30px;
+                 border: 1px solid #fff;
+                 position: absolute;
+                 list-style: none;
+                 animation: square 5s linear infinite;
+            }
+            .square  li{
+                top: 10%;
+                left: 10%;
+            }
+            .square  li:nth-child(2){
+                top: 10%;
+                left: 80%;
+                animation-delay: 2s;
+            }
+            .square  li:nth-child(3){
+                top: 80%;
+                left: 10%;
+                animation-delay: 4s;
+            }
+            .square  li:nth-child(4){
+                top: 80%;
+                left: 80%;
+                animation-delay: 6s;
+            }
+            .square  li:last-child{
+                top: 50%;
+                left: 50%;
+                animation-delay: 8s;
+            }
+            @keyframes square{
+                0%{
+                    transform: scale(0) rotateY(0deg);
+                }
+                100%{
+                    transform: scale(5) rotateY(1000deg);
+                    opacity: 0;
+                }
+            }
+            .circle > ul > li{
+                 width: 30px;
+                 height: 30px;
+                 border: 1px solid #fff;
+                 position: absolute;
+                 list-style: none;
+                 animation: circle 5s linear infinite;
+            }
+            .circle li{
+                bottom: 5%;
+                left: 10%;
+            }
+            .circle li:nth-child(2){
+                bottom: 5%;
+                left: 25%;
+                animation-delay: 2s;
+            }
+            .circle li:nth-child(3){
+                bottom: 5%;
+                left: 40%;
+                animation-delay: 4s;
+            }
+            .circle li:nth-child(4){
+                bottom: 5%;
+                left: 55%;
+                animation-delay: 6s;
+            }
+            .circle li:last-child{
+                bottom: 5%;
+                left: 70%;
+                animation-delay: 8s;
+            }
+            @keyframes circle{
+                0%{
+                    transform: scale(0);
+                }
+                100%{
+                    transform: scale(8);
+                    bottom: 90%;
+                    opacity: 0;
+                    border-radius: 30px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h1>OkLabs Software Solutions Pakistan</h1>
+        <div class="square">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="circle">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </body>
+</html>
